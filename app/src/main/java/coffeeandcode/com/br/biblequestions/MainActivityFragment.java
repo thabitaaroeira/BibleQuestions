@@ -29,7 +29,7 @@ public class MainActivityFragment extends Fragment {
 
         questaoService = new QuestaoService(this.getContext());
 
-        descricaoQuestao = (EditText) view.findViewById(R.id.descQuestao);
+        descricaoQuestao = (TextView) view.findViewById(R.id.descQuestao);
         descricaoQuestao.setText(montarTexto());
 
         return view;

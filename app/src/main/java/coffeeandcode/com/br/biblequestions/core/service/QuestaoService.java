@@ -20,7 +20,9 @@ public class QuestaoService {
     }
 
     public Questao findById(Integer id){
-        Cursor cs = dao.consultarPorId(DaoUtils.obterNomeTabela(Questao.class), id);
+        //Cursor cs = dao.consultarPorId(DaoUtils.obterNomeTabela(Questao.class), id);
+        Integer total = dao.consultarTotalRegistros(DaoUtils.obterNomeTabela(Questao.class));
+        Cursor cs = dao.consultarTodos(DaoUtils.obterNomeTabela(Questao.class));
         Questao questao = new Questao();
         questao.convertTo(cs);
 
