@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 
 import coffeeandcode.com.br.biblequestions.core.database.Database;
+import coffeeandcode.com.br.biblequestions.visao.GameModeActivity;
 
 public class ApresentacaoActivity extends Activity {
 
@@ -41,7 +42,7 @@ public class ApresentacaoActivity extends Activity {
 
                     //Carrega a Activity Principal
                     Intent i = new Intent();
-                    i.setClass(ApresentacaoActivity.this, MainActivity.class);
+                    i.setClass(ApresentacaoActivity.this, GameModeActivity.class);
                     startActivity(i);
                 }
             }

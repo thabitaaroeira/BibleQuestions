@@ -1,4 +1,8 @@
 <resources>
-    <string name="app_name">BibleQuestions</string>
+    <string name="app_name">Bible Questions</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_game_mode">GameModeActivity</string>
+    <string name="game_mode">Escolha o modo de jogo:</string>
+    <string name="game_mode_bt1">Um jogador</string>
+    <string name="game_mode_bt2">Vários jogadores</string>
 </resources>
