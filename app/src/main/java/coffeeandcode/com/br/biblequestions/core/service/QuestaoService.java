@@ -15,11 +15,11 @@ public class QuestaoService {
 
     private ProjectDao dao;
 
-    public QuestaoService(Context context){
+    public QuestaoService(Context context) {
         dao = new ProjectDao(new Database(context));
     }
 
-    public Questao findById(Integer id){
+    public Questao findById(Integer id) {
         //Cursor cs = dao.consultarPorId(DaoUtils.obterNomeTabela(Questao.class), id);
         Integer total = dao.consultarTotalRegistros(DaoUtils.obterNomeTabela(Questao.class));
         Cursor cs = dao.consultarTodos(DaoUtils.obterNomeTabela(Questao.class));
@@ -29,7 +29,7 @@ public class QuestaoService {
         return questao;
     }
 
-    public Questao findQuestaoComMenosExibicoes(){
+    public Questao findQuestaoComMenosExibicoes() {
         return new Questao();
     }
 }

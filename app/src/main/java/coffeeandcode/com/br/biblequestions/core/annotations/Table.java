@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package coffeeandcode.com.br.biblequestions.core.annotations;
 
@@ -11,13 +11,12 @@ import java.lang.annotation.Target;
 
 /**
  * @author Leandro
- *
  */
 
 @Documented
-@Target(value={ElementType.TYPE})
-@Retention(value=RetentionPolicy.RUNTIME)
+@Target(value = {ElementType.TYPE})
+@Retention(value = RetentionPolicy.RUNTIME)
 public @interface Table {
 
-	String nome();
+    String nome();
 }

@@ -9,21 +9,20 @@ import coffeeandcode.com.br.biblequestions.core.annotations.Table;
  * Created by Leandro on 27/02/2016.
  */
 
-@Table(nome="TB_QUESTAO")
+@Table(nome = "TB_QUESTAO")
 public class Questao implements Entidade {
 
-    @Column(nome="id")
+    @Column(nome = "id")
     private Integer id;
 
-    @Column(nome="descricao")
+    @Column(nome = "descricao")
     private String descricao;
 
-    @Column(nome="tipo")
+    @Column(nome = "tipo")
     private TipoResposta tipo;
 
-    @Column(nome="exibicao")
+    @Column(nome = "exibicao")
     private Integer exibicao;
-
 
 
     @Override
@@ -33,7 +32,7 @@ public class Questao implements Entidade {
 
     @Override
     public void convertTo(Cursor cursor) {
-        while(cursor.moveToNext()){
+        while (cursor.moveToNext()) {
             id = cursor.getInt(0);
             setDescricao(cursor.getString(1));
             //tipo =

@@ -73,7 +73,7 @@ public class GameModeActivity extends AppCompatActivity {
         }
     };
 
-    private Context getCurrentContext(){
+    private Context getCurrentContext() {
         return this;
     }
 }

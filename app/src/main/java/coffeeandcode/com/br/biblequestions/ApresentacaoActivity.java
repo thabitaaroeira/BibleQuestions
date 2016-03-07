@@ -26,17 +26,16 @@ public class ApresentacaoActivity extends Activity {
             @Override
             public void run() {
                 try {
-                    synchronized(this){
+                    synchronized (this) {
                         //Espera por 1 e meio segundos ou sai quando
                         //o usuário tocar na tela
                         wait(1500);
                         mblnClicou = true;
                     }
-                }
-                catch(InterruptedException ex){
+                } catch (InterruptedException ex) {
                 }
 
-                if (mblnClicou){
+                if (mblnClicou) {
                     //fechar a tela de Splash
                     finish();
 
@@ -52,8 +51,7 @@ public class ApresentacaoActivity extends Activity {
     }
 
     @Override
-    public void onPause()
-    {
+    public void onPause() {
         super.onPause();
 
         //garante que quando o usuário clicar no botão
@@ -65,7 +63,7 @@ public class ApresentacaoActivity extends Activity {
     public boolean onTouchEvent(MotionEvent event) {
         if (event.getAction() == MotionEvent.ACTION_DOWN) {
             //o método abaixo está relacionado a thread de splash
-            synchronized(mSplashThread){
+            synchronized (mSplashThread) {
                 mblnClicou = true;
 
                 //o método abaixo finaliza o comando wait
